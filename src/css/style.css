@@ -1,0 +1,309 @@
+.navbar {
+  display: flex;
+  align-items: center; }
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 65px;
+  padding: 5px;
+  background-color: #354f52;
+  z-index: 10; }
+  .navbar__logo {
+    font-size: 43px;
+    font-family: "PTSans-Bold"; }
+    @media screen and (max-width: 768px) {
+      .navbar__logo {
+        font-size: 23px;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%); } }
+  .navbar__bars {
+    display: none;
+    opacity: 0; }
+    @media screen and (max-width: 768px) {
+      .navbar__bars {
+        display: block;
+        color: black;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        z-index: 1; } }
+  .navbar__menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    opacity: 1; }
+    @media screen and (max-width: 768px) {
+      .navbar__menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10rem 0;
+        width: 100vw;
+        height: 100vh;
+        font-size: 2rem;
+        background-color: #354f52;
+        transition: opacity 0.6s 0.5s, clip-path 1s 0.5s;
+        clip-path: circle(5px at top right); } }
+    .navbar__menu .navbar--link {
+      margin: 0 15px; }
+      .navbar__menu .navbar--link a:hover {
+        color: #cad2c5;
+        transition: all 0.3s ease; }
+  @media screen and (max-width: 768px) {
+    .navbar__action {
+      display: flex; } }
+  .navbar .fa {
+    font-size: 19px;
+    margin: 0 5px;
+    cursor: pointer; }
+
+.navbar a {
+  color: black; }
+
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url(../fonts/PTSans-Bold.ttf); }
+
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url(../fonts/PTSans-Regular.ttf); }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "PTSans-Regular"; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #cad2c5; }
+
+img {
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 65px 0 0 0; }
+
+.container {
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1553px; }
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url("https://via.placeholder.com/1500.jpg/000000/?text=Banner");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+.section {
+  padding: 45px 0; }
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .cards-container {
+      flex-direction: column; } }
+  .cards-container .cards-side {
+    display: flex;
+    flex-direction: row; }
+  .cards-container .card__character {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 70px 25px;
+    background-image: url(../images/character.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 1230px) {
+      .cards-container .card__character {
+        width: 110px;
+        height: 110px;
+        margin: 30px 25px; } }
+    @media screen and (max-width: 990px) {
+      .cards-container .card__character {
+        width: 75px;
+        height: 75px; } }
+    @media screen and (max-width: 768px) {
+      .cards-container .card__character {
+        width: 90px;
+        height: 90px;
+        margin: 10px 20px; } }
+    @media screen and (max-width: 375px) {
+      .cards-container .card__character {
+        width: 55px;
+        height: 55px;
+        margin: 10px 20px; } }
+
+.section-exibition {
+  width: 100%;
+  background-color: #84a98c; }
+  .section-exibition .exibition {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    min-height: 581px; }
+    @media screen and (max-width: 990px) {
+      .section-exibition .exibition {
+        font-size: 80%; }
+        .section-exibition .exibition h1 {
+          font-size: 1rem; } }
+    .section-exibition .exibition .info {
+      position: absolute;
+      top: 23%;
+      left: 3%;
+      text-align: left;
+      width: 24%; }
+      .section-exibition .exibition .info h1 {
+        font-size: 1.5rem;
+        margin: 8% 0px; }
+    .section-exibition .exibition .cards-exibition {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      width: 53%;
+      display: flex;
+      justify-content: space-between; }
+      .section-exibition .exibition .cards-exibition .sides {
+        position: relative;
+        width: 49%;
+        display: flex;
+        flex-direction: column; }
+      .section-exibition .exibition .cards-exibition .card-left-side {
+        margin: 9.5% auto 0 0; }
+      .section-exibition .exibition .cards-exibition .card-right-side {
+        margin: 0 0 0 auto; }
+        .section-exibition .exibition .cards-exibition .card-right-side .card-bottom {
+          margin: 4% 0 0 0; }
+      .section-exibition .exibition .cards-exibition .card-info {
+        width: 100%; }
+        .section-exibition .exibition .cards-exibition .card-info .image {
+          width: 100%; }
+        .section-exibition .exibition .cards-exibition .card-info figure {
+          width: 100%; }
+          .section-exibition .exibition .cards-exibition .card-info figure img {
+            border-radius: 5px 5px 0 0; }
+      .section-exibition .exibition .cards-exibition .card-info-text {
+        width: 100%;
+        text-align: center;
+        padding: 5% 0;
+        margin: -2% 0 0 0;
+        background-color: #84798c;
+        border-radius: 0 0 5px 5px; }
+      @media screen and (max-width: 990px) {
+        .section-exibition .exibition .cards-exibition {
+          font-size: 80%; }
+          .section-exibition .exibition .cards-exibition h1 {
+            font-size: 1rem; } }
+    .section-exibition .exibition .arrow-down {
+      position: absolute;
+      bottom: -7%;
+      left: 5%; }
+      .section-exibition .exibition .arrow-down .fas {
+        font-size: 6rem; }
+      @media screen and (max-width: 768px) {
+        .section-exibition .exibition .arrow-down .fas {
+          opacity: 0; } }
+  @media screen and (max-width: 375px) {
+    .section-exibition .exibition {
+      margin: -33% 0 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .section-exibition .exibition .info {
+        position: relative;
+        width: 100%; }
+      .section-exibition .exibition .cards-exibition {
+        position: relative;
+        width: 100%;
+        font-size: 65%;
+        margin: 42% 0 0 0; } }
+
+.empty-section {
+  width: 100%;
+  height: 40vh;
+  background-color: #cad2c5; }
+
+.section-carousel {
+  width: 100%; }
+  .section-carousel .container .half-background {
+    position: absolute;
+    top: 76%;
+    left: 0;
+    width: 77%;
+    height: 24%;
+    background-color: #354f52;
+    border-radius: 0 5px 5px 0;
+    z-index: -1; }
+  .section-carousel .container .carousel-content {
+    width: 100%;
+    margin: 5% 0% 5% 3%; }
+    .section-carousel .container .carousel-content .carousel-elements {
+      width: 65%;
+      display: flex; }
+      .section-carousel .container .carousel-content .carousel-elements .item-container {
+        width: 40%; }
+        .section-carousel .container .carousel-content .carousel-elements .item-container img {
+          border-radius: 5px; }
+      .section-carousel .container .carousel-content .carousel-elements .item-info {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 0 0 5%; }
+        .section-carousel .container .carousel-content .carousel-elements .item-info h1 {
+          font-size: 2rem; }
+        .section-carousel .container .carousel-content .carousel-elements .item-info .btn-item {
+          width: 50%;
+          background-color: black;
+          padding: 3% 5%;
+          text-align: center;
+          color: #cad2c5;
+          border-radius: 5px;
+          cursor: pointer;
+          border: 1px solid #000000; }
+        .section-carousel .container .carousel-content .carousel-elements .item-info .btn-item:hover {
+          background-color: #cad2c5;
+          border: 1px solid black;
+          color: black;
+          transition: all 0.3s ease; }
+        @media screen and (max-width: 990px) {
+          .section-carousel .container .carousel-content .carousel-elements .item-info h1 {
+            font-size: 1.5rem; } }
+    @media screen and (max-width: 1230px) {
+      .section-carousel .container .carousel-content .carousel-elements {
+        font-size: 80%; } }
+    @media screen and (max-width: 990px) {
+      .section-carousel .container .carousel-content .carousel-elements {
+        font-size: 64%; } }
