@@ -24,9 +24,13 @@ function menuOpacity() {
     });
   }
 }
-window.addEventListener("load", menuOpacity);
-window.addEventListener("resize", menuOpacity);
-window.addEventListener("scroll", function () {
+
+function navbarAnimation() {
   var navbarSticky = document.getElementById("sticky");
   navbarSticky.classList.toggle("sticky", window.scrollY > 0);
-});
+}
+
+window.addEventListener("load", menuOpacity);
+window.addEventListener("resize", menuOpacity);
+window.addEventListener("scroll", navbarAnimation);
+window.addEventListener("load", navbarAnimation);

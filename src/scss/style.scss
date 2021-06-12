@@ -26,6 +26,12 @@ body {
   background-color: $background;
 }
 
+@include large {
+  body {
+    font-size: 90%;
+  }
+}
+
 img {
   width: 100%;
 }
@@ -71,13 +77,11 @@ a {
 }
 
 .cards-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 
   @include tablet {
-    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .cards-side {
@@ -89,7 +93,7 @@ a {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 70px 25px;
+    margin: 70px auto;
     background-image: url(../images/character.jpg);
     background-position: 50% 50%;
     background-size: cover;
@@ -98,7 +102,7 @@ a {
     @include medium {
       width: 110px;
       height: 110px;
-      margin: 30px 25px;
+      margin: 30px auto;
     }
 
     @include small {
@@ -109,13 +113,12 @@ a {
     @include tablet {
       width: 90px;
       height: 90px;
-      margin: 10px 20px;
+      margin: 10px auto;
     }
 
     @include mobile {
-      width: 55px;
-      height: 55px;
-      margin: 10px 20px;
+      width: 75px;
+      height: 75px;
     }
   }
 }
@@ -123,6 +126,12 @@ a {
 .section-exibition {
   width: 100%;
   background-color: $background-exibition;
+
+  .empty-section {
+    width: 100%;
+    height: 40vh;
+    background-color: $background;
+  }
 
   .exibition {
     position: relative;
@@ -240,34 +249,30 @@ a {
       .cards-exibition {
         position: relative;
         width: 95%;
-        font-size: 63%;
+        font-size: 80%;
         margin: 42% auto 0 auto;
       }
     }
   }
 }
 
-.empty-section {
-  width: 100%;
-  height: 40vh;
-  background-color: $background;
-}
-
 .section-carousel {
+  position: relative;
   width: 100%;
+
+  .half-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 95%;
+    width: 1465px;
+    height: 100%;
+    background-color: #f09f0f;
+    border-radius: 0 5px 5px 0;
+    z-index: -1;
+  }
 
   .container {
-    .half-background {
-      position: absolute;
-      top: 76.2%;
-      left: 0;
-      width: 77%;
-      height: 24%;
-      background-color: $background-half;
-      border-radius: 0 5px 5px 0;
-      z-index: -1;
-    }
-
     .carousel-content {
       width: 100%;
       display: flex;
@@ -289,7 +294,7 @@ a {
           width: 45%;
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
+          justify-content: space-evenly;
           margin: 0 0 0 5%;
 
           h1 {
@@ -297,7 +302,7 @@ a {
           }
 
           .btn-item {
-            width: 50%;
+            width: 51%;
             background-color: black;
             padding: 3% 5%;
             text-align: center;
@@ -337,7 +342,7 @@ a {
 
         @include mobile {
           .item-container {
-            width: 68%;
+            width: 100%;
           }
 
           .item-info {
@@ -371,14 +376,17 @@ a {
           font-size: 80%;
         }
       }
+
       @include small {
         .carousel-elements {
-          width: 70%;
+          width: 89%;
+          justify-content: center;
+          align-items: center;
         }
 
         .swiper-container {
-          width: 50%;
-          margin: 4% 0 0 5%;
+          width: 90%;
+          margin: 5% 0;
         }
       }
       @include tablet {
@@ -388,9 +396,90 @@ a {
       }
     }
 
+    @include large {
+      .carousel-content {
+        margin: 5% 0 3% 3%;
+      }
+    }
+
     @include small {
       .carousel-content {
         flex-direction: column;
+      }
+    }
+  }
+}
+
+.section-insta {
+  width: 100%;
+
+  .container {
+    text-align: center;
+
+    @include tablet {
+      .insta-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .insta-cards {
+          margin: 2% 0;
+          .insta-card-info {
+            margin: 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .insta-content {
+    display: flex;
+    justify-content: space-around;
+
+    .insta-cards {
+      width: 272px;
+      height: 272px;
+
+      figure {
+        img {
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .insta-center-card {
+      text-align: center;
+
+      @include medium {
+        .insta-card-info {
+          font-size: 80%;
+        }
+      }
+    }
+
+    .insta-card-info {
+      background-color: $background-card;
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10%;
+      margin: 22% 0 0 0;
+      border-radius: 5px;
+    }
+
+    @include small {
+      .insta-cards {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+    @include tablet {
+      .insta-cards {
+        width: 160px;
+        height: 160px;
       }
     }
   }
