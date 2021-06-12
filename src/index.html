@@ -13,29 +13,31 @@
     <title>Ecommerce</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <a href="#">LOGO</a>
-      </div>
-      <div class="navbar__bars" id="menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar--link"><a href="#">MENU</a></li>
-        <li class="navbar--link"><a href="#">MENU</a></li>
-        <li class="navbar--link"><a href="#">MENU</a></li>
-        <li class="navbar--link"><a href="#">MENU</a></li>
-        <li class="navbar--link"><a href="#">MENU</a></li>
-      </ul>
-      <ul class="navbar__action">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-      </ul>
-    </nav>
+    <header>
+      <nav class="navbar" id="sticky">
+        <div class="navbar__logo">
+          <a href="#">LOGO</a>
+        </div>
+        <div class="navbar__bars" id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar--link"><a href="#">MENU</a></li>
+          <li class="navbar--link"><a href="#">MENU</a></li>
+          <li class="navbar--link"><a href="#">MENU</a></li>
+          <li class="navbar--link"><a href="#">MENU</a></li>
+          <li class="navbar--link"><a href="#">MENU</a></li>
+        </ul>
+        <ul class="navbar__action">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        </ul>
+      </nav>
+    </header>
     <main class="main">
       <div class="main-banner"></div>
-      <section class="section">
+      <section class="section section-shape">
         <div class="container">
           <div class="cards-container">
             <div class="cards-side">
@@ -70,7 +72,7 @@
                 <div class="card-info">
                   <figure>
                     <img
-                      src="https://picsum.photos/id/2/360/450"
+                      src="https://picsum.photos/id/15/360/450"
                       alt="Banner"
                       height="100%"
                     />
@@ -88,7 +90,7 @@
                 <div class="card-info">
                   <figure class="image">
                     <img
-                      src="https://picsum.photos/id/1/360/225"
+                      src="https://picsum.photos/id/16/360/225"
                       alt="Banner"
                     />
                   </figure>
@@ -103,7 +105,7 @@
                 <div class="card-info card-bottom">
                   <figure>
                     <img
-                      src="https://picsum.photos/id/3/360/450"
+                      src="https://picsum.photos/id/17/360/450"
                       alt="Banner"
                     />
                   </figure>
@@ -130,7 +132,7 @@
           <div class="carousel-content">
             <div class="carousel-elements">
               <figure class="item-container">
-                <img src="https://picsum.photos/id/4/200/270" alt="banner" />
+                <img src="https://picsum.photos/id/13/200/270" alt="banner" />
               </figure>
               <div class="item-info">
                 <p>Lorem impsum lorem dolor</p>
@@ -146,20 +148,30 @@
                 <div class="btn-item">Call-to-action ></div>
               </div>
             </div>
-            <!-- Slider main container -->
             <div class="swiper-container">
-              <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
+                <div class="swiper-slide">
+                  <img
+                    src="https://picsum.photos/id/18/260/149"
+                    alt="Notepad"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://picsum.photos/id/19/260/149"
+                    alt="Notebook"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="https://picsum.photos/id/14/260/149"
+                    alt="Notebook"
+                  />
+                </div>
               </div>
-              <!-- If we need pagination -->
               <div class="swiper-pagination"></div>
 
-              <!-- If we need navigation buttons -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
             </div>

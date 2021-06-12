@@ -413,13 +413,13 @@ a {
   }
   .section-exibition .exibition .info {
     position: relative;
-    width: 100%;
+    width: 94%;
   }
   .section-exibition .exibition .cards-exibition {
     position: relative;
-    width: 100%;
-    font-size: 65%;
-    margin: 42% 0 0 0;
+    width: 95%;
+    font-size: 63%;
+    margin: 42% auto 0 auto;
   }
 }
 
@@ -435,7 +435,7 @@ a {
 
 .section-carousel .container .half-background {
   position: absolute;
-  top: 76%;
+  top: 76.2%;
   left: 0;
   width: 77%;
   height: 24%;
@@ -446,6 +446,9 @@ a {
 
 .section-carousel .container .carousel-content {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 5% 0% 5% 3%;
 }
 
@@ -507,6 +510,56 @@ a {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .section-carousel .container .carousel-content .carousel-elements .item-info .btn-item {
+    margin: 3% 0 0 0;
+    width: 54%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-carousel .container .carousel-content .carousel-elements .item-info {
+    width: 75%;
+    margin: 4% 0 0 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section-carousel .container .carousel-content .carousel-elements .item-container {
+    width: 68%;
+  }
+  .section-carousel .container .carousel-content .carousel-elements .item-info {
+    width: 100%;
+  }
+}
+
+.section-carousel .container .carousel-content .swiper-container {
+  width: 32%;
+  height: 100%;
+  margin: auto 0;
+  border-radius: 5px;
+}
+
+.section-carousel .container .carousel-content .swiper-container img {
+  border-radius: 5px;
+}
+
+.section-carousel .container .carousel-content .swiper-container .swiper-pagination {
+  opacity: 0;
+}
+
+.section-carousel .container .carousel-content .swiper-container .swiper-button-prev,
+.section-carousel .container .carousel-content .swiper-container .swiper-button-next {
+  color: #cad2c5;
+}
+
+.section-carousel .container .carousel-content .swiper-container .swiper-button-next:hover,
+.section-carousel .container .carousel-content .swiper-container .swiper-button-prev:hover {
+  color: #52796f;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 @media screen and (max-width: 1230px) {
   .section-carousel .container .carousel-content .carousel-elements {
     font-size: 80%;
@@ -515,7 +568,16 @@ a {
 
 @media screen and (max-width: 990px) {
   .section-carousel .container .carousel-content .carousel-elements {
-    font-size: 64%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-carousel .container .carousel-content .carousel-elements {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

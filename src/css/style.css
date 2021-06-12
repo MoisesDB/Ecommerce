@@ -7,10 +7,12 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 65px;
-  padding: 5px;
-  background-color: #354f52;
-  z-index: 10; }
+  padding: 40px 100px;
+  transition: 0.6s;
+  color: #f1e5b2;
+  background-color: black;
+  box-shadow: 0px -8px 40px black;
+  z-index: 99; }
   .navbar__logo {
     font-size: 43px;
     font-family: "PTSans-Bold"; }
@@ -53,13 +55,13 @@
         width: 100vw;
         height: 100vh;
         font-size: 2rem;
-        background-color: #354f52;
+        background-image: linear-gradient(to left, #f3d542, #f09f0f);
         transition: opacity 0.6s 0.5s, clip-path 1s 0.5s;
         clip-path: circle(5px at top right); } }
     .navbar__menu .navbar--link {
       margin: 0 15px; }
       .navbar__menu .navbar--link a:hover {
-        color: #cad2c5;
+        color: #f09f0f;
         transition: all 0.3s ease; }
   @media screen and (max-width: 768px) {
     .navbar__action {
@@ -69,7 +71,22 @@
     margin: 0 5px;
     cursor: pointer; }
 
+.sticky {
+  padding: 5px 100px;
+  background-color: #f09f0f; }
+  .sticky .navbar--link a:hover {
+    color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 10px black;
+    transition: all 0.3s ease; }
+  @media screen and (max-width: 768px) {
+    .sticky {
+      padding: 20px 100px; } }
+
 .navbar a {
+  color: #f1e5b2; }
+
+.sticky a,
+.sticky .fa {
   color: black; }
 
 @font-face {
@@ -91,7 +108,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: #cad2c5; }
+  background-color: #f1e5b2; }
 
 img {
   width: 100%; }
@@ -103,8 +120,7 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 65px 0 0 0; }
+  width: 100%; }
 
 .container {
   padding-right: 5%;
@@ -125,6 +141,9 @@ a {
 
 .section {
   padding: 45px 0; }
+
+.section-shape {
+  background-color: #f1e5b2; }
 
 .cards-container {
   display: flex;
@@ -168,7 +187,7 @@ a {
 
 .section-exibition {
   width: 100%;
-  background-color: #84a98c; }
+  background-color: #e9b23c; }
   .section-exibition .exibition {
     position: relative;
     width: 100%;
@@ -219,7 +238,7 @@ a {
         text-align: center;
         padding: 5% 0;
         margin: -2% 0 0 0;
-        background-color: #84798c;
+        background-color: #f4b601;
         border-radius: 0 0 5px 5px; }
       @media screen and (max-width: 990px) {
         .section-exibition .exibition .cards-exibition {
@@ -243,31 +262,32 @@ a {
       justify-content: space-between; }
       .section-exibition .exibition .info {
         position: relative;
-        width: 100%; }
+        width: 94%; }
       .section-exibition .exibition .cards-exibition {
         position: relative;
-        width: 100%;
-        font-size: 65%;
-        margin: 42% 0 0 0; } }
+        width: 95%;
+        font-size: 63%;
+        margin: 42% auto 0 auto; } }
 
 .empty-section {
   width: 100%;
   height: 40vh;
-  background-color: #cad2c5; }
+  background-color: #f1e5b2; }
 
 .section-carousel {
   width: 100%; }
   .section-carousel .container .half-background {
     position: absolute;
-    top: 76%;
+    top: 76.2%;
     left: 0;
     width: 77%;
     height: 24%;
-    background-color: #354f52;
+    background-color: #f09f0f;
     border-radius: 0 5px 5px 0;
     z-index: -1; }
   .section-carousel .container .carousel-content {
     width: 100%;
+    display: flex;
     margin: 5% 0% 5% 3%; }
     .section-carousel .container .carousel-content .carousel-elements {
       width: 65%;
@@ -289,21 +309,55 @@ a {
           background-color: black;
           padding: 3% 5%;
           text-align: center;
-          color: #cad2c5;
+          color: #f1e5b2;
           border-radius: 5px;
           cursor: pointer;
           border: 1px solid #000000; }
         .section-carousel .container .carousel-content .carousel-elements .item-info .btn-item:hover {
-          background-color: #cad2c5;
+          background-color: #112139;
           border: 1px solid black;
-          color: black;
+          color: #fff;
           transition: all 0.3s ease; }
         @media screen and (max-width: 990px) {
           .section-carousel .container .carousel-content .carousel-elements .item-info h1 {
             font-size: 1.5rem; } }
+        @media screen and (max-width: 375px) {
+          .section-carousel .container .carousel-content .carousel-elements .item-info .btn-item {
+            margin: 3% 0 0 0;
+            width: 54%; } }
+      @media screen and (max-width: 768px) {
+        .section-carousel .container .carousel-content .carousel-elements .item-info {
+          width: 75%;
+          margin: 4% 0 0 0; } }
+      @media screen and (max-width: 375px) {
+        .section-carousel .container .carousel-content .carousel-elements .item-container {
+          width: 68%; }
+        .section-carousel .container .carousel-content .carousel-elements .item-info {
+          width: 100%; } }
+    .section-carousel .container .carousel-content .swiper-container {
+      width: 32%;
+      height: 100%;
+      margin: auto 0;
+      border-radius: 5px; }
+      .section-carousel .container .carousel-content .swiper-container img {
+        border-radius: 5px; }
+      .section-carousel .container .carousel-content .swiper-container .swiper-pagination {
+        opacity: 0; }
+      .section-carousel .container .carousel-content .swiper-container .swiper-button-prev,
+      .section-carousel .container .carousel-content .swiper-container .swiper-button-next {
+        color: #f1e5b2; }
     @media screen and (max-width: 1230px) {
       .section-carousel .container .carousel-content .carousel-elements {
         font-size: 80%; } }
     @media screen and (max-width: 990px) {
       .section-carousel .container .carousel-content .carousel-elements {
-        font-size: 64%; } }
+        width: 70%; }
+      .section-carousel .container .carousel-content .swiper-container {
+        width: 50%;
+        margin: 4% 0 0 5%; } }
+    @media screen and (max-width: 768px) {
+      .section-carousel .container .carousel-content .carousel-elements {
+        flex-direction: column; } }
+  @media screen and (max-width: 990px) {
+    .section-carousel .container .carousel-content {
+      flex-direction: column; } }
