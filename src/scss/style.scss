@@ -322,6 +322,11 @@ a {
           @include small {
             h1 {
               font-size: 1.5rem;
+              margin: 5% 0;
+            }
+
+            .btn-item {
+              margin: 5% 0 0 0;
             }
           }
 
@@ -329,6 +334,10 @@ a {
             .btn-item {
               margin: 3% 0 0 0;
               width: 54%;
+            }
+
+            h1 {
+              margin: 0;
             }
           }
         }
@@ -480,6 +489,141 @@ a {
       .insta-cards {
         width: 160px;
         height: 160px;
+      }
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10% 0 0 0;
+
+  .logo-footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 3% 0;
+
+    .line-logo {
+      width: 47%;
+      height: 1px;
+      background-color: gray;
+      margin: auto 0;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  .container {
+    .footer-infos {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      .sides-content {
+        position: relative;
+        width: 15%;
+
+        .submenu {
+          position: relative;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          padding: 16% 0;
+
+          a {
+            color: gray;
+            text-decoration: none;
+          }
+        }
+
+        .submenu-right {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .middle-content {
+        position: relative;
+        width: 40%;
+
+        .input-container {
+          width: 100%;
+          padding: 8% 0;
+
+          input {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid silver;
+            font-size: 17px;
+            background-color: $background;
+            font-size: 12px;
+          }
+
+          label {
+            position: absolute;
+            bottom: 30%;
+            left: 0;
+            color: gray;
+            pointer-events: none;
+            transition: all 0.3s ease;
+          }
+
+          input:focus ~ label {
+            transform: translateY(-100%);
+            font-size: 15px;
+          }
+
+          input:focus {
+            outline: none;
+          }
+
+          .btn-submit {
+            position: absolute;
+            bottom: 30%;
+            right: 0;
+            color: gray;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .bottom-footer {
+      position: relative;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      margin: 5% 0 2% 0;
+
+      .copy {
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: gray;
+        }
+      }
+    }
+
+    @include tablet {
+      .footer-infos {
+        flex-direction: column;
+        align-items: center;
+        font-size: 80%;
+
+        .sides-content,
+        .middle-content {
+          text-align: center;
+          width: 70%;
+        }
       }
     }
   }

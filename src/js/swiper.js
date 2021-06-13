@@ -1,14 +1,15 @@
 const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
 
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
   },
 
-  // Navigation arrows
+  autoplay: {
+    delay: 3000,
+  },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
